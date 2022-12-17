@@ -11,7 +11,7 @@ const MovieCategory = () => {
     setSearchMovie(e.target.value);
   };
   const getMovies = async (search) => {
-    let url = `https://www.omdbapi.com/?s=${search}&apikey=3fd72be2`;
+    let url = `https://www.omdbapi.com/?s=${search}&apikey=${process.env.REACT_APP_apiKey}`;
 
     try {
       const response = await fetch(url);
