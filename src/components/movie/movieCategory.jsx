@@ -30,16 +30,19 @@ const MovieCategory = () => {
     <div className={classes.wrapper}>
       <div className={classes.searchBox}>
         <label className={classes.label}>Search</label>
-        <input
-          type="text"
-          onChange={handleChange}
-          className={classes.input}
-        />
+        <input type="text" onChange={handleChange} className={classes.input} />
       </div>
-      <div className={classes.movieWrapper}>
-        {movies.map((movie) => {
-          return <MovieItem key={movie.imdbID} movie={movie} />;
-        })}
+      <div className={classes.contianer}>
+        <div className={classes.movieWrapper}>
+          {movies.map((movie) => {
+            return <MovieItem key={movie.imdbID} movie={movie} />;
+          })}
+        </div>
+        <div className={classes.movieWrapper}>
+          {movies.map((movie) => {
+            return <MovieItem key={movie.imdbID} movie={movie} />;
+          })}
+        </div>
       </div>
     </div>
   );
