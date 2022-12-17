@@ -5,7 +5,7 @@ import MovieItem from "./movieItems";
 
 const MovieCategory = () => {
   const [movies, setMovies] = useState([]);
-  const [searchMovie, setSearchMovie] = useState("star wars");
+  const [searchMovie, setSearchMovie] = useState("avengers");
 
   const handleChange = (e) => {
     setSearchMovie(e.target.value);
